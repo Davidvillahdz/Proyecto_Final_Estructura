@@ -1,6 +1,8 @@
 [![Universidad Politécnica Salesiana ](UPS "Universidad Politécnica Salesiana ")](https://upload.wikimedia.org/wikipedia/commons/b/b0/Logo_Universidad_Polit%C3%A9cnica_Salesiana_del_Ecuador.png "Universidad Politécnica Salesiana ")
 # Universidad Politécnica Salesiana
+
 # PROYECTO FIN DE CICLO
+
 Juan Álvarez, David Villa
 
 Estructura de Datos
@@ -12,31 +14,48 @@ Ing. Pablo Torres.
 # DESCRIPCION DEL PROYECTO:
 
 El objetivo de este proyecto es desarrollar un programa que permita gestionar una lista de contactos telefónicos. Cada contacto compuesto por lo siguiente:
+
 •	NOMBRE: El nombre del contacto, puede ser cualquier cadena de texto representado el nombre y apellido.
+
 •	Número de teléfono: Un número telefónico asociado al contacto, que puede ser de cualquier longitud y formato (número fijo, móvil, con código de país, etc.).
+
 •	Colección de correos: Una lista que contendrá las direcciones de correo electrónico asociadas al contacto. Puede haber cero o varias direcciones de correo electrónico almacenadas en esta colección.
+
 •	Diccionario de redes sociales: Un diccionario donde se almacenará la información de las redes sociales asociadas al contacto. La clave del diccionario será el nombre de la red social (por ejemplo, "Facebook", "Twitter", "Instagram", etc.), y el valor será el usuario o perfil del contacto en esa red.
 
 ## FUNCIONALIDADES:
 
 •	Agregar contacto: El programa permitirá ingresar un nuevo contacto con su nombre, número de teléfono, cero o más correos electrónicos y las redes sociales con sus respectivos usuarios.
+
 •	Eliminar contacto: Se podrá eliminar un contacto existente a partir de su nombre o número de teléfono.
+
 •	Agregar un correo (Según nombre de contacto, agrega un correo a la Coleccion)
+
 •	Agregar una red social (Según nombre de contacto, agrega una red social, pasando como argumento la llave del diccionario y el valor (url)) (Si la llave ya existe deberá ser actualizado por la url que me manda).
+
 •	Imprimir el árbol según el recorrido:
+
 o	preorder
+
 o	inorder
+
 o	postorder
+
 o	anchura
+
 •	Obtener el número de contactos totales (Peso del árbol)
+
 •	Buscar contacto: El programa permitirá buscar un contacto por su nombre o número de teléfono y mostrar toda su información, incluyendo correos electrónicos y redes sociales asociadas.
+
 •	Salir: Opción para cerrar el programa de forma segura.
+
 Este proyecto proporciona una herramienta útil para que los usuarios puedan almacenar y administrar sus contactos de manera organizada, con la flexibilidad de agregar información sobre correos electrónicos y perfiles de redes sociales asociados a cada contacto.
 
 
 ## DOCUMENTACION DE CADA UNA DE LAS CLASES DEL PROYECTO:
 
 ### ARBOL CONTACTOS
+
 La clase ArbolContactos representa el árbol de búsqueda binaria y tiene una variable miembro privada raíz de tipo Node, que sirve como raíz del árbol.
 
 El constructor inicializa el árbol estableciendo la raíz raíz en null.
@@ -72,15 +91,21 @@ Esa es una breve descripción general de la funcionalidad del fragmento de códi
 ### CONTACTO
 
 Atributos:
+
 Nombre: Un atributo público de tipo String, que almacena el nombre del contacto.
+
 Teléfono: Un atributo privado de tipo String, que almacena el número de teléfono del contacto.
+
 Emails: Una colección de tipo List que almacenará correos electrónicos asociados al contacto.
+
 RedesSociales: Un diccionario de tipo Map que almacenará las redes sociales del contacto, con las llaves siendo el nombre de la red social y los valores siendo los nombres de usuario asociados.
 
 Constructor:
+
 La clase tiene un constructor público que acepta dos parámetros: nombre y teléfono. Al crear un objeto Contacto, se deben proporcionar estos valores, y la colección de correos electrónicos y el diccionario de redes sociales se inicializarán como listas vacías.
 
 Métodos:
+
 getNombre () y getTelefono (): Métodos públicos para obtener el nombre y el teléfono del contacto, respectivamente.
 
 setNombre () y setTelefono(): Métodos públicos para establecer el nombre y el teléfono del contacto, respectivamente.
@@ -96,6 +121,7 @@ eliminarRedSocial (): Método público que permite eliminar una red social del d
 modificarRedSocial (): Método público que permite modificar el valor de una red social en el diccionario redes Sociales, tomando como entrada el nombre de la red social y el nuevo nombre de usuario.
 
 ### NODE
+
 Contacto: Esta variable contiene un objeto de tipo Contacto. Representa los datos asociados con este nodo en el árbol binario.
 
 Left: esta variable contiene una referencia al nodo secundario izquierdo del nodo actual.
